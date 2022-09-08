@@ -1,0 +1,40 @@
+version: "3.3"
+
+services:
+  mongo:
+    image: mongo:3.2
+    container_name: mongo
+    environment:
+      AUTH: null
+      MONGO_INITDB_DATABASE: userdb
+    restart: always
+    ports:
+      - "27017:27017"
+
+  app1:
+    build:
+      context: .
+      dockerfile: ./dockers/app/Dockerfile
+    container_name: app1
+    depends_on:
+      - mongo
+    ports:
+      - "8080"
+
+  app2:
+    build:
+      context: .
+      dockerfile: ./dockers/app/Dockerfile
+    container_name: app2
+    depends_on:
+      - mongo
+    ports:
+      - "8080"
+
+  proxy:
+    build:
+      context: .
+      dockerfile: ./dockers/proxy/Dockerfile
+    container_name: proxy
+    ports:
+      - "9001:9001"
