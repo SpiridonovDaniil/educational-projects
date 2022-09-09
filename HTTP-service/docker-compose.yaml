@@ -18,8 +18,6 @@ services:
     container_name: app1
     depends_on:
       - mongo
-    ports:
-      - "8080"
 
   app2:
     build:
@@ -28,8 +26,6 @@ services:
     container_name: app2
     depends_on:
       - mongo
-    ports:
-      - "8080"
 
   proxy:
     build:
