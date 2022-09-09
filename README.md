@@ -1,6 +1,8 @@
 # educational-projects
 I am learning the golang programming language
+
 Задача
+
 Цель практической работы
 
 Научиться: 
