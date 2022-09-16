@@ -1,7 +1,7 @@
 # educational-projects
 I am learning the golang programming language
 
-Задача 1
+Задача 1 HTTP-service
 
 Цель практической работы
 
@@ -37,6 +37,7 @@ I am learning the golang programming language
 
 
 Задание 2. Конвейер
+
 Цели задания
 
     Научиться работать с каналами и горутинами.
@@ -71,6 +72,7 @@ I am learning the golang programming language
 
 
 Задание 3. Graceful shutdown
+
 Цель задания
 
 Научиться правильно останавливать приложения.
